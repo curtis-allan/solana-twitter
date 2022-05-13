@@ -1,0 +1,23 @@
+[features]
+seeds = false
+
+[programs.localnet]
+anchor_solana_test = "7mwVjFXXVcyREk73PCqa84ag1FZLXc1pcLRVYCwqqrQL"
+
+[programs.devnet]
+anchor_solana_test = "7mwVjFXXVcyREk73PCqa84ag1FZLXc1pcLRVYCwqqrQL"
+
+[programs.mainnet]
+anchor_solana_test = "7mwVjFXXVcyREk73PCqa84ag1FZLXc1pcLRVYCwqqrQL"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/curtis/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+copy-idl = "mkdir -p app/src/idl && cp target/idl/anchor_solana_test.json app/src/idl/anchor_solana_test.json"
+
